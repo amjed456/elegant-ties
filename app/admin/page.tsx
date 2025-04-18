@@ -125,8 +125,8 @@ export default function AdminPage() {
 
   // Only load data if authenticated
   useEffect(() => {
-    // Check if already authenticated from previous session
-    const storedAuth = localStorage.getItem('easyTieAdminAuth')
+    // Only load data if the component is mounted and we're authenticated
+    const storedAuth = typeof window !== 'undefined' ? localStorage.getItem('easyTieAdminAuth') : null;
     if (storedAuth === 'true') {
       setIsAuthenticated(true)
       loadData()
