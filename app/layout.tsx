@@ -1,3 +1,4 @@
+import "../lib/react-polyfill.js"  // Import polyfill for useEffectEvent
 import "./globals.css"
 import { Inter } from "next/font/google"
 import { Playfair_Display } from "next/font/google"
